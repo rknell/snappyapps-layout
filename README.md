@@ -3,6 +3,27 @@ SnappyApps Layout
 
 A fullscreen web app or mobile app layout engine for the web. It aims to solve complex issues around 100% height css strains, as well as providing headers and footers and abstracting away the more complex parts of flexbox including cross platform / browser issues.
 
+Do this:
+![enter image description here](http://i.imgur.com/5n51dTF.png)
+
+By typing this:
+
+```
+<div class="sa-container">
+    <div class="sa-layout vertical">
+        <div>Header</div>
+        <div class="grow no-style">
+            <div class="sa-layout horizontal">
+                <div>Menu</div>
+                <div class="grow">Content</div>
+                <div>Right Column</div>
+            </div>
+        </div>
+        <div>Footer</div>
+    </div>
+</div>
+```
+
 ###Installation
 
 If you are using bower
