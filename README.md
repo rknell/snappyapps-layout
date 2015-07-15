@@ -5,7 +5,13 @@ A fullscreen web app or mobile app layout engine for the web. It aims to solve c
 
 ###Installation
 
-Include the css and javascript files in your project to get started
+If you are using bower
+
+```
+bower install snappyapps-layout --save
+```
+
+Then include the css and javascript files in your project to get started
 
 ```
 <link rel="stylesheet" src="css/snappyapps-layout.css">
