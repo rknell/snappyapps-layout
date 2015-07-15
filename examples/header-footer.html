@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Header Footer Layout</title>
+    <link rel="stylesheet" href="../css/snappyapps-layout.css"/>
+    <style>
+        .sa-container {
+            background-color: grey;
+        }
+
+        .sa-layout>div {
+            padding: 20px;
+            border-radius: 20px;
+            background-color: lightgrey;
+            margin: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="sa-container">
+    <div class="sa-layout vertical">
+        <div>Header</div>
+        <div class="grow">Content</div>
+        <div>Footer</div>
+    </div>
+</div>
+<script src="../js/snappyapps-layout.js"></script>
+</body>
+</html>

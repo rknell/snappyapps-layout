@@ -1,0 +1,70 @@
+@import "../bower_components/bourbon/app/assets/stylesheets/_bourbon";
+
+.sa-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border: none;
+
+  @include display(flex);
+  @include flex-direction(column);
+}
+
+.sa-layout {
+  @include display(flex);
+  overflow-x: hidden;
+  border: none;
+
+  &.content-height {
+    height: auto !important;
+  }
+
+  &.justify-start {
+    @include justify-content(flex-start);
+  }
+
+  &.justify-end {
+    @include justify-content(flex-end);
+  }
+
+  &.justify-center {
+    @include justify-content(center);
+  }
+
+  > div {
+    @include flex-shrink(0);
+    @include flex-grow(0);
+    @include flex-basis(auto);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  &.horizontal {
+    @include flex-direction(row);
+  }
+
+  &.vertical {
+    @include flex-direction(column);
+  }
+
+  .grow {
+    @include flex-grow(1);
+    @include flex-shrink(1);
+  }
+
+  .shrink {
+    @include flex-shrink(1);
+  }
+
+  .wrap-container {
+    @include flex-shrink(1);
+  }
+
+  &.wrap {
+    @include flex-wrap(wrap);
+  }
+}

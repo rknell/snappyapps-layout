@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Header Footer Layout with Wrapping Content</title>
+    <link rel="stylesheet" href="../css/snappyapps-layout.css"/>
+    <style>
+        .sa-container {
+            background-color: grey;
+        }
+
+        .sa-layout>div {
+            padding: 20px;
+            border-radius: 20px;
+            background-color: lightgrey;
+            margin: 8px;
+        }
+        .sa-layout>div.grid-item, .grid-item {
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            background-color: #4294f0;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="sa-container">
+    <div class="sa-layout vertical wrap-container">
+        <div>Header</div>
+        <div class="grow wrap-container">
+            <div class="sa-layout horizontal wrap content-height">
+                <div class="grid-item">Item</div>
+                <div class="grid-item">Item</div>
+                <div class="grid-item">Item</div>
+                <div class="grid-item">Item</div>
+                <div class="grid-item">Item</div>
+                <div class="grid-item">Item</div>
+                <div class="grid-item">Item</div>
+                <div class="grid-item">Item</div>
+            </div>
+
+            <div class="grid-item">Non wrapping content</div>
+            <div class="grid-item">Non wrapping content</div>
+            <div class="grid-item">Non wrapping content</div>
+            <div class="grid-item">Non wrapping content</div>
+            <div class="grid-item">Non wrapping content</div>
+            <div class="grid-item">Non wrapping content</div>
+
+
+        </div>
+        <div>Footer</div>
+    </div>
+</div>
+<script src="../js/snappyapps-layout.js"></script>
+</body>
+</html>
