@@ -1,4 +1,4 @@
-function refresh(){
+function snappyappsRefresh(){
   var layouts = document.getElementsByClassName('sa-layout');
   layouts = [].slice.call(layouts);
   console.log(layouts);
@@ -11,5 +11,5 @@ function refresh(){
   })
 }
 
-window.addEventListener('resize', refresh);
-window.addEventListener('load', refresh);
+window.addEventListener('resize', snappyappsRefresh);
+window.addEventListener('load', snappyappsRefresh);

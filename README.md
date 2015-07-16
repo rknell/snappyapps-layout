@@ -53,7 +53,7 @@ Once you have your sa-container, you need to create your first sa-layout element
 
 There are two basic options:
 
- - **Horizontal** - The layout wil tile left to right across the page
+ - **Horizontal** - The layout will tile left to right across the page
  - **Vertical** - The layout will tile top to bottom down the page
 
 An example **3 column** horizontal layout, with two fixed columns on either side and a content section that will grow to fill the available space:
