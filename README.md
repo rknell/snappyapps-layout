@@ -26,13 +26,7 @@ By typing this:
 
 ###Installation
 
-If you are using bower
-
-```
-bower install snappyapps-layout --save
-```
-
-Then include the css and javascript files in your project to get started
+Include the css and javascript files in your project to get started
 
 ```
 <link rel="stylesheet" src="css/snappyapps-layout.css">
@@ -53,7 +47,7 @@ Once you have your sa-container, you need to create your first sa-layout element
 
 There are two basic options:
 
- - **Horizontal** - The layout will tile left to right across the page
+ - **Horizontal** - The layout wil tile left to right across the page
  - **Vertical** - The layout will tile top to bottom down the page
 
 An example **3 column** horizontal layout, with two fixed columns on either side and a content section that will grow to fill the available space:
@@ -177,3 +171,19 @@ The system automatically scrolls all content that exceeds a container with its o
 SnappyApps-layout makes extensive use of flexbox. So if your target browsers will have trouble rendering flexbox then this project is probably not for you. Luckily ie and some versions of Android are the only browsers not fully supporting the specification at the time of writing. For more information (and probably more up-to-date info) check out Can I Use for flexbox:
 
 http://caniuse.com/#feat=flexbox
+
+---
+##AngularJS
+If you use AngularJS there is a bundled AngularJS directive that hooks into the digest cycle and recalculates what it needs to. Without it, layouts will appear pretty broken!
+
+To install the directive in your app, do everything listed in the `installation` section and:
+
+	<script src="bower_components/snappyapps-layout/js/angular-snappyapps-layout.js></script>
+
+Add `snappyappsLayout` to your app.js file eg:
+
+     app.module('myApp', ['snappyappsLayout'])
+
+Then on your snappyapps-container element add the attribute snappyapps-container:
+
+	<div class="snappyapps-container" snappyapps-container></div>
