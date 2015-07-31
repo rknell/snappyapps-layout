@@ -186,4 +186,4 @@ Add `snappyappsLayout` to your app.js file eg:
 
 Then on your snappyapps-container element add the attribute snappyapps-container:
 
-	<div class="snappyapps-container" snappyapps-container></div>
+	<div class="sa-container" snappyapps-container></div>
