@@ -81,7 +81,8 @@
     flex-basis: auto;
     -ms-flex-preferred-size: auto;
     overflow-y: auto;
-    overflow-x: hidden; }
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; }
   .sa-layout.horizontal {
     -webkit-box-orient: horizontal;
     -moz-box-orient: horizontal;
