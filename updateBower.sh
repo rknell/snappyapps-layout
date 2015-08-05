@@ -1,0 +1,1 @@
+bower register snappyapps-layout https://github.com/rknell/snappyapps-layout.git
