@@ -12,8 +12,14 @@ angular.module('snappyappsLayout', []).directive('saContainer', function () {
         });
       }
 
+      var digestDebounce;
       postDigest(function () {
-        snappyappsRefresh();
+        if(digestDebounce){
+          $timeout.cancel(digestDebounce);
+        }
+        digestDebounce = $timeout(function(){
+          snappyappsRefresh();
+        }, 300, false);
       })
     }
   };
