@@ -174,16 +174,22 @@ http://caniuse.com/#feat=flexbox
 
 ---
 ##AngularJS
-If you use AngularJS there is a bundled AngularJS directive that hooks into the digest cycle and recalculates what it needs to. Without it, layouts will appear pretty broken!
+Previously we had published an AngularJS directive with the component but found heaps of performance and rendering issues by recalculating automatically in the digest cycle.
 
-To install the directive in your app, do everything listed in the `installation` section and:
+Currently the best practice is to call refresh after you render a view (if you are using AngularUI Router). Add this to your app.js
 
-	<script src="bower_components/snappyapps-layout/js/angular-snappyapps-layout.js></script>
+```
+    $rootScope.$on('$viewContentLoaded', snappyappsRefresh);
+    $rootScope.$on("$stateChangeSuccess", snappyappsRefresh);
+``` 
 
-Add `snappyappsLayout` to your app.js file eg:
+Full code example (you need to replace myApp with your module, and you may have other stuff in the .run function!):
 
-     app.module('myApp', ['snappyappsLayout'])
+```
+angular.module('myApp').run(function($rootScope) {
 
-Then on your snappyapps-container element add the attribute snappyapps-container:
+    $rootScope.$on('$viewContentLoaded', snappyappsRefresh);
+    $rootScope.$on("$stateChangeSuccess", snappyappsRefresh);
 
-	<div class="sa-container" snappyapps-container></div>
+});
+```
