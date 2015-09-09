@@ -10,6 +10,11 @@
   overflow-y: hidden;
   border: none;
 
+  //Necessary to fix rendering issues in webkit browsers in some instances
+  //http://stackoverflow.com/questions/6953497/webkit-transform-overwrites-z-index-ordering-in-chrome-13
+  @include transform(translate3d(0,0,0));
+
+
   @include display(flex);
   @include flex-direction(column);
 }
