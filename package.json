@@ -1,0 +1,25 @@
+{
+  "name": "snappyapps-layout",
+  "version": "1.0.0",
+  "description": "Bootstap style flexbox layout system for apps.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rknell/snappyapps-layout.git"
+  },
+  "author": "SnappyApps",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/rknell/snappyapps-layout/issues"
+  },
+  "homepage": "https://github.com/rknell/snappyapps-layout#readme",
+  "dependencies": {
+    "bourbon": "^4.3.4"
+  }
+}
