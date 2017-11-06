@@ -30,8 +30,9 @@ Include the css and javascript files in your project to get started
 
 ```
 <link rel="stylesheet" src="css/snappyapps-layout.css">
-<script src="js/snappyapps-layout.js">
 ```
+
+** Note for pre 1.0 users. The Javascript requirement has now been removed. This MAY cause some breaking changes, however all attempts have been made to fix this. It wil improve speed and weird keyboard issues on mobile so is very much a recommended upgrade. ** 
 
 ###Usage
 
@@ -171,25 +172,3 @@ The system automatically scrolls all content that exceeds a container with its o
 SnappyApps-layout makes extensive use of flexbox. So if your target browsers will have trouble rendering flexbox then this project is probably not for you. Luckily ie and some versions of Android are the only browsers not fully supporting the specification at the time of writing. For more information (and probably more up-to-date info) check out Can I Use for flexbox:
 
 http://caniuse.com/#feat=flexbox
-
----
-##AngularJS
-Previously we had published an AngularJS directive with the component but found heaps of performance and rendering issues by recalculating automatically in the digest cycle.
-
-Currently the best practice is to call refresh after you render a view (if you are using AngularUI Router). Add this to your app.js
-
-```
-    $rootScope.$on('$viewContentLoaded', snappyappsRefresh);
-    $rootScope.$on("$stateChangeSuccess", snappyappsRefresh);
-``` 
-
-Full code example (you need to replace myApp with your module, and you may have other stuff in the .run function!):
-
-```
-angular.module('myApp').run(function($rootScope) {
-
-    $rootScope.$on('$viewContentLoaded', snappyappsRefresh);
-    $rootScope.$on("$stateChangeSuccess", snappyappsRefresh);
-
-});
-```
